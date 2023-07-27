@@ -1,0 +1,2 @@
+teamname  icc_ranking  noplayers	won      lost   captain     coach   username    password
+pakistan         7         4         6         2    misbah      zain      ffdd       345 
