@@ -1,4 +1,4 @@
-# 🏏CricketProVision
+# CricketProVision🏏
 
 ![CricketProVision Logo](url_to_logo_image)
 
