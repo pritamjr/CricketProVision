@@ -1,4 +1,6 @@
 Team1     team2
 pakistan africa 
-pakistan neatherland 
+pakistan netherland 
 africa newzealand 
+netherland new 
+africa pakistan 

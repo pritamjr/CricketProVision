@@ -68,12 +68,12 @@ int main()
 	}
 	else
 	{
-		cout << "u enter the wrong informtion" << endl;
+		cout << "You have entered the wrong informtion" << endl;
 	}
 	int  i;
 	int mostruns, mostsixes, mostfours, mostcenturies, highestaverage, beststrikerate, mostwickets;
 	
-	cout << "1-do u want to conduct a match \n2- u want to scdule a match:";
+	cout << "1-do u want to conduct a match \n 2- u want to schedule a match:";
 	cin >> n;
 	switch (n)
 		{
@@ -146,9 +146,9 @@ int main()
 				cout << "Most wickets: " << mostwickets << endl;
 				cout << "strike rate:" << beststrikerate << endl;
 			}
-			else if (win == "neatherland")
+			else if (win == "netherland")
 			{
-				cout << "neatherland won" << endl;
+				cout << "netherland won" << endl;
 				m.set_fours(mostfours);
 				m.set_sixes(mostsixes);
 				m.set_runs(mostruns);

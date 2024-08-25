@@ -85,7 +85,7 @@ void Player::add_player()
 	cout << "ENTER THE ICC RANKING IN EACH FORMAT:";
 	cin >> icc_ranking;
 	set_icc_ranking(icc_ranking);
-	cout << "enter the average:";
+	cout << "Enter the average:";
 	cin >> average;
 	setaverage(average);
 	cout << "ENTER THE TOTAL RUNS:";
@@ -182,7 +182,7 @@ void Player::search_player(Player* P, int size)
 	int count = 0;
 	cout << "Enter the team name from which the player belongs:" << endl;
 	cin >> team_name;
-	cout << "Enter the name of the player u want to remove:";
+	cout << "Enter the name of the player you want to remove:";
 	cin >> thisname;
 	ifstream inData;
 	inData.open("Player.txt", ios::in);
@@ -237,7 +237,7 @@ void Player::update_player(Player* P, int size)
 	int count = 0;
 	cout << "Enter the team name from which the player belongs:" << endl;
 	cin >> team_name;
-	cout << "Enter the name of the player u want to update:";
+	cout << "Enter the name of the player you want to update:";
 	cin >> thisname;
 	ifstream inData;
 	inData.open("Player.txt", ios::in);
@@ -332,11 +332,11 @@ void Player::display_team(Player* P)
 			count++;
 
 		}
-		cout << "Enter the name of the team u want to display:" << endl;
+		cout << "Enter the name of the team you want to display:" << endl;
 		cout << "PRESS 1 TO DISPLAY PAKISTANI TEAM" << endl;
-		cout << "PRESS 2 TO DISPLAY african TEAM" << endl;
-		cout << "PRESS 3 TO DISPLAY neatherland  TEAM" << endl;
-		cout << "PRESS 4 TO DISPLAY newzealand TEAM" << endl;
+		cout << "PRESS 2 TO DISPLAY African TEAM" << endl;
+		cout << "PRESS 3 TO DISPLAY Netherlands  TEAM" << endl;
+		cout << "PRESS 4 TO DISPLAY New Zealand TEAM" << endl;
 		cin >> input;
 		switch (input)
 		{
@@ -368,7 +368,7 @@ void Player::display_team(Player* P)
 		{
 			for (int i = 0; i < count; i++)
 			{
-				if (P[i].Team_name == "neatherland")
+				if (P[i].Team_name == "netherland")
 				{
 					cout << "THE NAME OF THE TEAM IS:" << P[i].Team_name << "\nTHE NAME OF THE PLAYER IS: " << P[i].name << "\nTHE SHIRT NO OF THE PLAYER IS: " << P[i].shirt_no << "\nTHE ICC RANKING OF THE PLAYER IS: " << P[i].icc_ranking << "\nThe average of the player is: " << P[i].average << "\nTHE TOTAL RUNS OF THE PLAYER IS: " << P[i].total_runs << "\nTHE TOTAL MATCHES PLAYED BY PLAYER IS: "
 						<< P[i].match_played << "\nTHE TOTAL WICKETS OF THE PLAYER IS: " << P[i].total_wickets << ' ' << endl;
@@ -497,7 +497,7 @@ int Team::access_data(Team* T)
 	int n = 0;
 	string team;
 	string username, password;
-	cout << "Enter the team name u want to acces:";
+	cout << "Enter the team name you want to access:";
 	cin >> team;
 	cout << "Enter username and password:";
 	cin >> username >> password;
@@ -531,7 +531,7 @@ int Team::access_data(Team* T)
 			{
 				if (username == T[i].admin_username && password == T[i].admin_password)
 				{
-					cout << "u can access everthing u want" << endl;
+					cout << "You can access everthing u want" << endl;
 					n = 1;
 					break;
 				}
@@ -567,7 +567,7 @@ void Team::Add_team(Team* T)
 	cout << "Enter the username to acess the team:";
 	cin >> admin_username;
 	set_admin_username(admin_username);
-	cout << "Enter the pssword to access the team:";
+	cout << "Enter the password to access the team:";
 	cin >> admin_password;
 	set_admin_password(admin_password);
 	ifstream inData;
@@ -586,7 +586,7 @@ void Team::Add_team(Team* T)
 		}
 		for (int i = 0; i < count+1; i++)
 		{
-			if (team_name=="pakistan"|| team_name == "africa" ||team_name == "neatherland" || team_name == "newzealand"  )
+			if (team_name=="pakistan"|| team_name == "africa" ||team_name == "netherland" || team_name == "newzealand"  )
 			{
 				ofstream outData;
 				outData.open("Team.txt", ios::app);
@@ -633,9 +633,9 @@ void Team::update_coach(Team* T)
 		{
 			cout << "THE TEAM NAME OF THE COACH IS:" << T[i].team_name << "\nTHE COACH NAME IS:" << T[i].team_coach << endl;
 		}
-		cout << "enter the team name of the coach:";
+		cout << "Enter the team name of the coach:";
 		cin >> team_name;
-		cout << "Enter the coach name u want to update:";
+		cout << "Enter the coach name you want to update:";
 		cin >> coach_name;
 		for (int i = 0; i <= count; i++)
 		{
@@ -677,9 +677,9 @@ void Team::Update_captain(Team* T)
 	int count = 0;
 	ifstream inData;
 	inData.open("Team.txt", ios::in);
-	cout << "Enter the coach name u want to update:";
+	cout << "Enter the coach name you want to update:";
 	cin >> captain_name;
-	cout << "enter the team name of the coach:";
+	cout << "Enter the team name of the coach:";
 	cin >> namee;
 	if (!inData.is_open())
 	{
@@ -792,15 +792,15 @@ string Match::conduct_match(Match *m1)
 	int choice, count = 0;
 	string read;
 	string win;
-	cout << "DO U WANT TO CONDUCT ALREADY SECHDULED MATCH" << endl;
-	cout << "DO U WANT TO CONDUCT NEW MATCH" << endl;
+	cout << "Press 1-DO U WANT TO CONDUCT ALREADY SECHDULED MATCH" << endl;
+	cout << "Press 2-DO U WANT TO CONDUCT NEW MATCH" << endl;
 	cin >> choice;
 	switch (choice)
 	{
 	case 1:
 	{
 		ifstream inData;
-		inData.open("already_schdule_matches.txt", ios::in);
+		inData.open("Already_schdule_matches.txt", ios::in);
 		if (!inData.is_open())
 		{
 			cout << "Error opening file";
@@ -816,7 +816,7 @@ string Match::conduct_match(Match *m1)
 
 			}
 
-			cout << "ENter your choice for team1 and team2" << endl;
+			cout << "Enter your choice for team1 and team2" << endl;
 			cin >> team1 >> team2;
 			set_team(team1, team2);
 			cout << "THE match is going to held between " << team1 << " and " << team2 << endl;
@@ -832,7 +832,7 @@ string Match::conduct_match(Match *m1)
 
 
 			}
-			else if (team1 == "neatherland")
+			else if (team1 == "netherland")
 			{
 				date = "4 august 2023";
 				venue = "India";
@@ -902,8 +902,8 @@ string Match::sechdule_match(Match* m1)
 		}
 		srand(time(NULL));
 		ran = rand() % 2 + 1;
-		cout << "select the team between which u want to conduct match" << endl;
-		cout << "THE TEAMS ARE:1-pakistan   2-africa  3-neatherland   4-new zealand" << endl;
+		cout << "Select the team between which you want to conduct match" << endl;
+		cout << "THE TEAMS ARE:1-pakistan   2-africa  3-netherland   4-new zealand" << endl;
 		cout << "Enter the first team:";
 		cin >> team1;
 		cout << "Enter second team:";
@@ -913,7 +913,7 @@ string Match::sechdule_match(Match* m1)
 		{
 			if (m1[i].team1 != team1 || m1[i].team2 != team2)
 			{
-				cout << "THE match is going to held between " << team1 << " and " << team2 << endl;
+				cout << "The match is going to held between " << team1 << " and " << team2 << endl;
 				set_team(team1, team2);
 				cout << "Enter the match type:";
 				cin >> match_type;
@@ -927,7 +927,7 @@ string Match::sechdule_match(Match* m1)
 
 
 				}
-				else if (team1 == "neatherland")
+				else if (team1 == "netherland")
 				{
 					date = "4 august 2023";
 					venue = "India";
@@ -940,7 +940,7 @@ string Match::sechdule_match(Match* m1)
 				else if (team1 == "newzealand")
 				{
 					date = "9 august 2023";
-					venue = "neatherland";
+					venue = "netherland";
 				}
 				
 				fstream outData;
@@ -965,7 +965,7 @@ string Match::sechdule_match(Match* m1)
 		case 2:
 		{
 			cout << "TOURNAMENT IS GOING TO HELD " << endl;
-			cout << "THE TEAMS ARE \n" << "-----PAKISTAN------\n" << "-----AFRICA-----\n" << "-----NEATHERLAND------\n" << "-----NEW ZEALAND-----\n";
+			cout << "THE TEAMS ARE \n" << "-----PAKISTAN------\n" << "-----AFRICA-----\n" << "-----NETHERLAND------\n" << "-----NEW ZEALAND-----\n";
 			srand(time(NULL));
 			ran = rand() % 4 + 1;
 			if (ran == 1)
@@ -982,7 +982,7 @@ string Match::sechdule_match(Match* m1)
 			}
 			else if (ran == 3)
 			{
-				win = "neatherland";
+				win = "netherland";
 				return win;
 				break;
 			}
